@@ -1,46 +1,62 @@
 body{
     margin:0;
-    background:#111;
+    background:#090b16;
+    overflow:hidden;
     display:flex;
     justify-content:center;
     align-items:center;
     flex-direction:column;
     height:100vh;
+    font-family:Arial,sans-serif;
+}
+
+.stars{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(white 1px, transparent 1px);
+    background-size:40px 40px;
+    opacity:.3;
+    animation:twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:.2;}
+    to{opacity:.6;}
 }
 
 .flower{
     position:relative;
     width:200px;
     height:300px;
+    animation:bloom 2s ease;
+}
+
+@keyframes bloom{
+    from{
+        transform:scale(0);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
 }
 
 .petal{
     position:absolute;
     width:70px;
     height:100px;
-    background:pink;
+    background:#ff7eb9;
     border-radius:50%;
+    box-shadow:0 0 20px #ff7eb9;
 }
 
-.p1{
-    left:65px;
-    top:20px;
-}
-
-.p2{
-    left:25px;
-    top:60px;
-}
-
-.p3{
-    left:105px;
-    top:60px;
-}
-
-.p4{
-    left:65px;
-    top:100px;
-}
+.p1{left:65px;top:20px;}
+.p2{left:25px;top:60px;}
+.p3{left:105px;top:60px;}
+.p4{left:65px;top:100px;}
 
 .center{
     position:absolute;
@@ -50,19 +66,39 @@ body{
     border-radius:50%;
     left:75px;
     top:75px;
+    box-shadow:0 0 20px gold;
 }
 
 .stem{
     position:absolute;
     width:8px;
     height:150px;
-    background:green;
+    background:#16c60c;
     left:96px;
     top:120px;
 }
 
-h2{
+h1{
     color:white;
-    font-family:Arial;
-    margin-top:20px;
+    margin-top:10px;
+    animation:fade 3s;
+}
+
+.message{
+    color:#ffd6e8;
+    text-align:center;
+    max-width:500px;
+    font-size:20px;
+    animation:fade 5s;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
