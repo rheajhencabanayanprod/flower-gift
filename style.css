@@ -1,0 +1,68 @@
+body{
+    margin:0;
+    background:#111;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    height:100vh;
+}
+
+.flower{
+    position:relative;
+    width:200px;
+    height:300px;
+}
+
+.petal{
+    position:absolute;
+    width:70px;
+    height:100px;
+    background:pink;
+    border-radius:50%;
+}
+
+.p1{
+    left:65px;
+    top:20px;
+}
+
+.p2{
+    left:25px;
+    top:60px;
+}
+
+.p3{
+    left:105px;
+    top:60px;
+}
+
+.p4{
+    left:65px;
+    top:100px;
+}
+
+.center{
+    position:absolute;
+    width:50px;
+    height:50px;
+    background:gold;
+    border-radius:50%;
+    left:75px;
+    top:75px;
+}
+
+.stem{
+    position:absolute;
+    width:8px;
+    height:150px;
+    background:green;
+    left:96px;
+    top:120px;
+}
+
+h2{
+    color:white;
+    font-family:Arial;
+    margin-top:20px;
+}
